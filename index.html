@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]--> 
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+      
+	<!-- Meta information -->
+	<meta charset="utf-8">
+	
+	<title>html5 PPT Show Box</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index, follow" /> 
+	<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+	  
+	<!-- favicon & idevice homepage thumb -->
+	<link rel="shortcut icon" href="favicon.jpg">
+	
+	<!-- google font -->
+	<link href='http://www.uestc.edu.cn' rel='stylesheet' type='text/css'>
+	
+	<!-- main stylesheets -->
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/text.css" />
+	<link rel="stylesheet" href="css/960.css" />
+	<link rel="stylesheet" href="css/preview.css" />
+	<link rel="stylesheet" href="css/skin.min.css" />
+	
+	<!-- import jQuery -->
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/preview.js"></script>
+	<script type="text/javascript" src="js/jquery.pixelentity.kenburnsSlider.min.js"></script>
+		
+	<!--specify size of slider-->
+	<style>		
+		.peKenBurns {
+       		width: 920px;
+       		height: 450px;
+		}
+	</style>
+	
+	<script>
+
+		jQuery(function($){
+			$(".peKenBurns").peKenburnsSlider({externalFont:true})
+		})
+		// for google fonts, handle captions sizing only after fonts are loaded
+		jQuery(window).load(function() {
+			$(".peKenBurns").each(function() {
+				$(this).data("peKenburnsSlider").fontsLoaded()
+			})
+		})
+		
+	</script>
+    <script type="text/javascript">
+		
+		function hideEvent(){
+			document.getElementById("annotation").style.display = "none"; 
+		}
+    </script>
+    </head>
+   
+    <body id="preview1" class="clearfix">
+		
+       <div id="annotation">
+		<div id="wrapper" class="container_16"> 
+			<h3><center>3D盒子---PPT放映</center></h3>
+			<p><h2><center>------------让眼睛休息一会儿吧</h2></p></center>
+			<!--start peKenBurns slider-->
+			<div class="peKenBurns peNoJs" data-autopause="image" data-thumb="enabled" data-mode="kb" data-controls="always" data-shadow="enabled" data-logo="enabled">
+				 
+			   <div class="peKb_active" data-delay="5" data-thumb="img/thumbs/kb_01.jpg">
+			   <img src="img/kb_01.jpg" />
+			   <h1>车水马龙，霓虹璀璨，现代大都市生活缩影。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_00.jpg">
+			   <a class="video hd autoplay loop skiptonext">
+			   <img src="img/blank.png" data-src="img/kb_00.jpg"/></a>
+			   <h1>夕阳无限好，只是近黄昏。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_02.jpg">
+			   <img src="img/blank.png" data-src="img/kb_02.jpg"/>
+			   <h1>典雅中透着古朴。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_03.jpg">
+			   <img src="img/blank.png" data-src="img/kb_03.jpg" />
+			   <h1>太空影子：火星撞地球的宏景。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_04.jpg">
+			   <a class="video hd autoplay loop skiptonext" >
+			   <img src="img/blank.png" data-src="img/kb_04.jpg"  /></a>
+			   <h1>梦幻一般的蓝色星球，是每个人心中向往的桃源。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_05.jpg">
+			   <img src="img/blank.png" data-src="img/kb_05.jpg"  />
+			   <h1>即便潮起潮落也会淡然处之。</h1>
+			   </div>
+			   
+			   <!-- lazy loading active -->
+			   <div data-delay="5" data-thumb="img/thumbs/kb_06.jpg">
+			   <img src="img/blank.png" data-src="img/kb_06.jpg" />
+			   <h1>夕阳西下，美景如画。</h1>
+			   </div>
+				 
+			</div>	
+			<!--end peKenBurns slider -->
+			
+			</div>
+			 
+		 </div>
+		 <!--end wrapper-->
+		</div>
+	<!--end annotation-->
+		<div>
+			<center>
+			<input type="button" value="显示" onclick='parent.location="javascript:location.reload()"'/>
+			<input type="button" value ="隐藏" onclick= "hideEvent();"/>
+			</center>
+			</div>
+    </body>
+</html>
